@@ -460,8 +460,8 @@ function cycleImg(index) {
 }
 function cseSearch(query) {
 	// var cseKey = "AIzaSyBQWDimnA-AjyNZlXIsh_R3Ld8wYlAksfA";
-	var cseKey = "AIzaSyDrufMCRtOuOdYgbTXT-piKR3A-hZb5YvU";
-	// var cseKey = "AIzaSyD_SVLOZ-31PIlN_XCdKJAYXlw5yHFvcUw"
+	// var cseKey = "AIzaSyDrufMCRtOuOdYgbTXT-piKR3A-hZb5YvU";
+	var cseKey = "AIzaSyD_SVLOZ-31PIlN_XCdKJAYXlw5yHFvcUw"
 	var SEid = "004303949972187002826:5vg83odxtam";
 	// var query = prompt("Enter a Search");
 	var queryURL = "https://www.googleapis.com/customsearch/v1?&key=" + cseKey + "&searchType=image&imgSize=large&cx=" + SEid + "&q=" + query + "&excludeTerms=hotel|food|entertainment|logo|brand|home|dreams|journalist|auto|car|map|selfie|default" + "&safe=high";
