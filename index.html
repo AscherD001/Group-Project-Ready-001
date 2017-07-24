@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Bear</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <script type="text/javascript" src="https://api.eventful.com/js/api"></script>
+  <script src="assets/javascript/zomato.js" type="application/javascript"></script>
+
+</head>
+<body>
+
+  <div class="w3-sidebar w3-bar-block w3-card-3 w3-animate-right" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+    <div id="hotelBtn" class="sideBtn page-scroll w3-bar-item w3-button">Hotels</div>
+    <div id="foodBtn" class="sideBtn page-scroll w3-bar-item w3-button">Food</div>
+    <div id="entBtn" class="sideBtn page-scroll w3-bar-item w3-button">Events</div>
+  </div>
+  <div class="w3-bar TBnavbar">
+    <a href="#" class="w3-bar-item w3-button NBbutton" style="text-decoration: none" id="NBname"><img style="max-width:35px; margin-top: -7px;" src="assets/images/basichatbear.png"><strong>Travel</strong>Bear</a>
+    <input class="pull-right" id="autocomplete" name="search" type="text" placeholder="Search for a City"><input id="search_submit" value="Rechercher" type="submit">
+      
+    <button class="w3-button w3-medium pull-right" id="hamburger" onclick="w3_open()">&#9776;</button>
+  </div>
+  <div id="landingpage">
+    <div class="w3-card" id="displaydiv">
+      <img src="assets/images/suitcasebear.png" height="110px" width="135px" id="homelogo"></img>
+      <h1 id="question">Where would you like to go?</h1>
+      <br>
+      <input id="autocomplete1" placeholder="CITY, STATE"></input>
+      <!-- http://www.daterangepicker.com/  -->
+      <br>
+      <!-- <a class="page-scroll" id="search" >Go!</a> -->
+    <br> 
+    </div> 
+  </div><!--  END OF #LANDINGPAGE DIV -->
+  <div class="page-wrap" id="main" zclass="w3-main">
+
+  <div class="row" id="alldata">
+    <div class="leftColumn col-sm-6">
+      <div class="w3-card" id="infocarddiv">
+        <div class="row header">
+          <div class="topText col-sm-5" id="weather">Weather</div>
+          <div class="col-sm-6" id="time">Current Time</div>
+        </div>
+        <div class="wrapper container">
+          <div id="weather row">
+            <div id="image" class="col-xs-12">
+              <img class='weatherImg' src="">
+              <h2 class='temp'></h2>
+              <div class='clock'></div></img>
+            </div>
+            <span id="currenttime"></span>
+          </div>
+        </div>
+        <div class="city row header">City Info</div>
+          <div class="wrapper">
+            <img id="cityimage" height="200px" width="300px"></img>
+            </div>
+            <div class="row">
+              <div class="wrapper">
+                <p id="cityblurb"></p>
+              </div>
+            </div>
+           
+          <div class="row header"></div>
+            <div class="wrapper">
+              <div id="map"></div>
+              <div><span id="viewCount"></span></div>
+            </div>
+          </div>  
+        </div>
+        
+        
+        <div class="rightColumn col-sm-6">
+          <div class="sideBtn w3-card infocardRight" id="hotelBtn">
+            <div class="row header" id="hotels">Hotels
+              <div class="wrapper">
+                <p id="hotImage">Hotel images are appended here</p>
+              </div>
+            </div>
+          </div>
+
+          <!--     NEW CARD -->
+          <div class="sideBtn w3-card infocardRight" id="foodBtn">
+            <div class="row header">Food
+              <div class="wrapper">
+              <p id="fooImage">Food images are appended here</p>
+              </div>
+            </div>
+          </div> 
+          <!--     NEW CARD -->
+          <div class="sideBtn w3-card infocardRight" id="entBtn">
+            <div class="row header">Entertainment
+              <div class="wrapper">
+              <p id="entImage">Entertainment images are appended here</p>
+              </div>
+            </div>
+          </div> 
+          <div class="container" id="rightCol">
+          </div>
+        </div> <!-- END OF COLUMN /DIV -->
+      </div>
+      </div> <!-- END OF ALLDATA /DIV -->
+    </div> <!-- END OF PAGE WRAP DIV -->
+
+    <div class="footer"></div>
+
+<!-- This is your basic card skeleton
+
+<div class="w3-card" id="infocarddiv">
+  <div class="row header">
+    <div id="wrapper">
+    </div>
+  </div>
+</div> 
+                    Copy and paste above code to create a new info card-->
+  
+  
+  </div> <!-- page wrap ends here -->
+  <script type="text/javascript" src="assets/javascript/travelscripts.js"></script>
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+  <script type="text/javascript" src="assets/javascript/moment.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="application/javascript" src="assets/javascript/script.js"></script>
+</body>
